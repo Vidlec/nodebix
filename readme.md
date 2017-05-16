@@ -3,6 +3,10 @@ Nodebix is a API library for zabbix
   - Login
   - Call API
   - Logout
+# install
+```js
+npm install nodebix
+```
 
 # example
 
