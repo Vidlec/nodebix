@@ -10,13 +10,19 @@ Nodebix is a API library for zabbix
 var zabbix = require("nodebix");
 var client = new zabbix("zabbix_url","user","password");
 
-client.login().then((result)=>{
+client.login()
+.then((result) => {
     console.log(result);
-    client.call("host.get",{hostids:1}).then((result)=>{
-        console.log(result);
-        client.logout().then((result)=>console.log(result);
-    });
-}).catch((error)=>console.log(error));
+    return client.call("host.get", {hostids: 20});
+})
+.then((result) => {
+    console.log(result);
+    return client.logout();
+})
+.then((result) => {
+    console.log(result);
+})
+.catch((error) => console.log(error));
 ```
 
 Result:
