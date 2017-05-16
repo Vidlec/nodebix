@@ -32,7 +32,7 @@ function client(url, user, password) {
             }).then((body) => {
                 this.auth = body.result;
                 resolve("Logged in");
-            }).catch((error) => console.log(error));
+            }).catch((error) => reject(error));
         })
     }
     this.logout = () => {
@@ -40,7 +40,7 @@ function client(url, user, password) {
             this.call("user.logout", []).then((body) => {
                 this.auth = body.result;
                 resolve("Logged out");
-            }).catch((error) => console.log(error));
+            }).catch((error) => reject(error));
         })
     }
 }
