@@ -1,0 +1,19 @@
+{
+  "name": "nodebix",
+  "version": "1.0.2",
+  "description": "API library for Zabbix",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Josef Vidlák",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.81.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "zabbix",
+    "api"
+  ]
+}
